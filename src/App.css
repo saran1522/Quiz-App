@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  /* color: black; */
+}
+
+body {
+  height: 100vh;
+  margin: auto;
+  text-align: center;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+header {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dark {
+  background-color: #001219;
+  /* background-color: #16191a; */
+  color: white;
+}
+
+h1 {
+  font-size: 3rem;
+  color: rgb(106, 189, 210);
+}
+
+.logo {
+  height: 5em;
+  padding: 1.5em;
+  filter: drop-shadow(0 0 2em #3ed5fff3);
+  animation: logo-spin 5.5s linear infinite;
+  transition: all 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cfff2);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.mode-btn {
+  width: 60px;
+  padding: 8px;
+  background: transparent;
+  border-radius: 40px;
+  border: 1px solid black;
+  position: absolute;
+  right: 40px;
+  top: 30px;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.mode-btn:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+
+main {
+  text-align: center;
+}
+
+.main-screen {
+  height: 310px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.start-btn {
+  padding: 13px;
+  border: none;
+  background: transparent;
+  background: rgb(118, 201, 222);
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all .2s linear;
+}
+
+.start-btn:hover {
+  color: white;
+  background-color: rgb(100, 175, 192);
+}
+
+.answers {
+  /* height: 100%; */
+  /* width: 400px; */
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  justify-content: center;
+  gap: 10px;
+  /* border: 1px solid black; */
+}
+
+.ans-btn {
+  padding: 12px;
+  width: 100%;
+  background: transparent;
+  border: 1px solid rgb(118, 178, 255);
+  border-radius: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #6096ba;
+  transition: all .3s ease-in-out;
+}
+
+.ans-btn:enabled:hover {
+  color: black;
+  background: rgb(182, 228, 255);
+  border: 1px solid rgb(182, 228, 255);
+  margin-left: 50px;
+}
+
+.ans-btn:disabled {
+  color: black;
+}
+
+
+.correct {
+  border: 1px solid rgb(110, 247, 172);
+  background: rgb(110, 247, 172);
+}
+
+.wrong {
+  border: 1px solid rgb(255, 110, 110);
+  background: rgb(255, 110, 110);
+}
+
+.selected {
+  margin-left: 50px;
+}
+
+.next-btn {
+  padding: 10px;
+  /* width: 60px; */
+  border: 1px solid black;
+  background: transparent;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all .2s linear;
+}
+
+.next-btn:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.dark-btn {
+  background: rgb(54, 54, 54);
+  border: 1px solid white;
+  border: none;
+  color: white;
+}
+
+.dark-btn:hover {
+  background-color: white;
+  border: 1px solid white;
+  color: black;
+}
+
+.progress {
+  display: block;
+  position: relative;
+  margin: 10px auto;
+  width: 40%;
+  color: black;
+}
+
+progress {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 12px;
+  border-radius: 10px;
+}
+
+::-webkit-progress-bar {
+  background-color: rgb(255, 255, 255);
+  border-radius: 100px;
+  border: 1px solid rgb(67, 227, 255);
+}
+
+::-webkit-progress-value {
+  background-color: rgb(67, 227, 255);
+  border-radius: 100px;
+}
+
+.stats {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dark .progress {
+  background-color: #000000;
+  background-color: #001219;
+  color: white;
+  z-index: 0;
+}
+
+.score {
+  display: block;
+  margin: 30px auto;
+  padding: 10px;
+  font-size: 1.2rem;
+  width: 340px;
+  border-radius: 40px;
+  border: 1px solid rgb(20, 29, 29);
+  border: none;
+  background-color: rgb(232, 244, 255);
+}
+
+.dark .score {
+  background-color: rgb(38, 38, 38);
+  border: none;
+  color: white;
+}
+
+.again-btn {
+  padding: 10px;
+  background: transparent;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 40px;
+  cursor: pointer;
+  margin: 30px auto;
+  transition: all .3s ease-in-out;
+}
+
+.again-btn:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.dark .again-btn {
+  background-color: rgb(38, 38, 38);
+  border: none;
+  color: white;
+}
+
+footer {
+  display: block;
+  margin: 20px auto;
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+  /* overflow: hidden; */
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+.timer {
+  /* width: 50px; */
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 40px;
+  background: transparent;
+}
+
+.dark .timer {
+  border: 1px solid white;
+  color: white
+}
